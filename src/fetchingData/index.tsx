@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from "react";
 
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
@@ -9,6 +10,33 @@ interface Post {
 
 export default function Demo () {
   const [posts, setPosts] = useState<Post[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState();
+  const [page, setPage] = useState(0);
+
+  useEffect(() => {
+    const fetchPosts = async() => {
+      setIsLoading(true);
+      try {
+        const response = await fetch(`${BASE_URL}/posts?page=${page}`);
+        const posts = (await response.json()) as Post[];
+        setPosts(posts);
+      } catch (e: any) {
+        setError(e)
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchPosts();
+  }, [page]);
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (error) {
+    return <div>Something went wrong! Please try again</div>
+  }
 
   return (
     <div className="tutorial">
