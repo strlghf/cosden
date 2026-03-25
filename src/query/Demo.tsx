@@ -37,6 +37,7 @@ export function Demo () {
 
   return (
     <div>
+      <h1 data-testid="cypress-title">Cypress Demo</h1>
       <div>
         <input type="text" onChange={e => setTitle(e.target.value)} value={title} />
         <button onClick={handleClick}>Add Todo</button>
