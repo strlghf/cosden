@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.94.5",
+    "cypress": "^15.13.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "root": "github:tanstack/react-query"
