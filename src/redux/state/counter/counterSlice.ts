@@ -35,12 +35,29 @@ const counterSlice = createSlice({
     })
     .addCase(incrementAsync.fulfilled, (state, action: PayloadAction<number>) => {
       state.value += action.payload
+    });
+
+    builder.addCase(decrementAsync.pending, () => {
+      console.log("decrementAsync.pending");
+    })
+    .addCase(decrementAsync.fulfilled, (state, action: PayloadAction<number>) => {
+      if (state.value === 0) return
+
+      state.value -= action.payload
     })
   }
-});
+}); 
 
 export const incrementAsync = createAsyncThunk(
   "counter/incrementAsync",
+  async (amount: number) => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    return amount;
+  }
+)
+
+export const decrementAsync = createAsyncThunk(
+  "counter/decrementAsync",
   async (amount: number) => {
     await new Promise(resolve => setTimeout(resolve, 1000));
     return amount;
