@@ -1,11 +1,10 @@
 import './App.css'
-import Counter from './components/Counter'
+import CountriesPage from './components/CountriesPage'
 
 function App() {
   return (
     <>
-      <h1>My Redux App!</h1>
-      <Counter/>
+      <CountriesPage />
     </>
   )
 }
