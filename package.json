@@ -18,7 +18,8 @@
     "react-dom": "^19.2.4",
     "react-redux": "^9.2.0",
     "redux": "^5.0.1",
-    "root": "github:tanstack/react-query"
+    "root": "github:tanstack/react-query",
+    "zustand": "^5.0.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
