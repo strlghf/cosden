@@ -1,4 +1,10 @@
+import { useEffect } from "react";
 import { useCounterStore } from "./store";
+
+const logCount = () => {
+  // const count = useCounterStore.getState().count;
+  useCounterStore.setState({ count: 3 });
+}
 
 export function Zustando () {
   const count = useCounterStore(state => state.count);
@@ -6,6 +12,10 @@ export function Zustando () {
   const decrement = useCounterStore(state => state.decrement);
   const incrementAsync = useCounterStore(state => state.incrementAsync);
   const decrementAsync = useCounterStore(state => state.decrementAsync);
+
+  useEffect(() => {
+    logCount();
+  }, [])
   
   return (
     <>
