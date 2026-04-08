@@ -1,9 +1,9 @@
 import './App.css'
-import { Zustando } from './zustand'
+import { HookForm } from './hookForm/HookForm'
 function App() {
   return (
     <>
-      <Zustando />
+      <HookForm />
     </>
   )
 }
