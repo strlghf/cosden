@@ -11,4 +11,4 @@ export const userSchema = z.object({
   })
 })
 
-export type ZodSchemax =  z.infer<typeof userSchema>
+export type ZodSchemax = z.infer<typeof userSchema>
