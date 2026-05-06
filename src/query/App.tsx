@@ -1,7 +1,6 @@
-import './App.css'
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { useState } from 'react';
-import { Demo } from '../keysLists';
+import { Demo } from "./Demo";
 
 const queryClient = new QueryClient({
   defaultOptions: {

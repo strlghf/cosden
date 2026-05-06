@@ -1,3 +1,5 @@
+import type { Todo } from "./types.d";
+
 const todos = [
   {
     id: 1,

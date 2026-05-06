@@ -1,9 +1,10 @@
 import './App.css'
-import { HookForm } from './hookForm/HookForm'
+import { Query } from './pp/Query'
+
 function App() {
   return (
     <>
-      <HookForm />
+      <Query />
     </>
   )
 }
