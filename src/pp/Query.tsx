@@ -1,12 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-
-interface Users {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
+import { type Users } from "./types";
 
 async function fetchPosts() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");

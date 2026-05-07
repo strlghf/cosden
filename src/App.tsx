@@ -1,10 +1,10 @@
 import './App.css'
-import { Query } from './pp/Query'
+import { Caching } from './pp/Caching'
 
 function App() {
   return (
     <>
-      <Query />
+      <Caching />
     </>
   )
 }
