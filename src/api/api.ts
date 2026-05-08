@@ -9,4 +9,5 @@ type UsersFilters = z.infer<typeof getUserSchema>
 
 export async function getUsers(filters: UsersFilters) {
   const result = getUserSchema.safeParse(filters);
+  return result;
 }

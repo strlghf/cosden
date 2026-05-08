@@ -1,7 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { type ZodSchemax } from "./zodSchema"
+import { type ZodSchemax, userSchema } from "./zodSchema"
 import { useForm } from "react-hook-form"
-import { userSchema } from "./zodSchema";
 
 export function Zod () {
   const form = useForm<ZodSchemax>({

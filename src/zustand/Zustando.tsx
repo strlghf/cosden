@@ -3,10 +3,11 @@ import { useCounterStore } from "./store";
 
 const logCount = () => {
   // const count = useCounterStore.getState().count;
-  useCounterStore.setState({ count: 3 });
+  useCounterStore.setState({ count: 0 });
 }
 
 export function Zustando () {
+
   const count = useCounterStore(state => state.count);
   const increment = useCounterStore(state => state.increment);
   const decrement = useCounterStore(state => state.decrement);
@@ -22,8 +23,8 @@ export function Zustando () {
       <h1>{count}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
-      <button onClick={incrementAsync}>Decrement</button>
-      <button onClick={decrementAsync}>Decrement</button>
+      <button onClick={incrementAsync}>Increment Async</button>
+      <button onClick={decrementAsync}>Decrement Async</button>
     </>
   )
 }

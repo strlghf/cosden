@@ -10,7 +10,7 @@ async function fetchPosts() {
   return res.json();
 }
 
-// enabled for lazy loading
+// enabled - lazy loading
 export function Query () {
   const [isLoadData, setIsLoadData] = useState(false);
   const { data: posts, isLoading, error, refetch } = useQuery<Users[]>({

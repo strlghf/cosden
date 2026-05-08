@@ -54,8 +54,8 @@ const CountriesPage = () => {
   useEffect(() => {
     const controller = new AbortController();
 
+    setIsLoading(true);
     const fetchData = async() => {
-      setIsLoading(true);
       try {
         const res = await fetch(`${BASE_URL}/all`, {
           signal: controller.signal
