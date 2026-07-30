@@ -12,7 +12,7 @@ function PostList () {
   const { data, isLoading, isFetching } = useQuery<Users[]>({
     queryKey: ["posts"],
     queryFn: fetchPosts,
-    staleTime: 1000 * 10,
+    staleTime: 'static',
     gcTime: 1000 * 10,
     // refetchOnWindowFocus: true,
     // refetchOnReconnect: true,

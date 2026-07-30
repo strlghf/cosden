@@ -16,7 +16,8 @@ export function Query () {
   const { data: posts, isLoading, error, refetch } = useQuery<Users[]>({
     queryKey: ["posts"],
     queryFn: fetchPosts,
-    enabled: isLoadData
+    // staleTime: "static",
+    // enabled: isLoadData
   });
 
   const handleClick = () => {

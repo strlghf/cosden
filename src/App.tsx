@@ -1,10 +1,11 @@
 import './App.css'
-import { HookForm } from './hookForm/HookForm'
+import { Caching } from './pp/Caching'
+import { Query } from './pp/Query'
 
 function App() {
   return (
     <>
-      <HookForm />
+      <Caching />
     </>
   )
 }

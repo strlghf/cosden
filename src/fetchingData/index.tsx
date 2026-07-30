@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
@@ -20,7 +20,9 @@ export function Demo () {
     const fetchPosts = async() => {
       setIsLoading(true);
       try {
-        const response = await fetch(`${BASE_URL}/posts?page=${page}`, controller);
+        const response = await fetch(`${BASE_URL}/posts?page=${page}`, {
+          signal: controller.signal
+        });
         
         if (!response.ok) throw new Error("Error fetching data");
 
