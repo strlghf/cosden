@@ -19,6 +19,7 @@ export function Demo () {
 
     const fetchPosts = async() => {
       setIsLoading(true);
+
       try {
         const response = await fetch(`${BASE_URL}/posts?page=${page}`, {
           signal: controller.signal
@@ -34,7 +35,7 @@ export function Demo () {
           console.log("Aborted"); 
           return;
         }
-        setError(e)
+        setError(e);
       } finally {
         setIsLoading(false);
       }

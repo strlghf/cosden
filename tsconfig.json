@@ -8,7 +8,9 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "composite": true,
+    "noEmit": false
   },
   "include": ["src", "cypress"]
 }
